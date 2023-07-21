@@ -1,0 +1,1 @@
+export type Hex32 = string;

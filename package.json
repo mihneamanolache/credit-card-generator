@@ -1,0 +1,57 @@
+{
+    "name": "@mihnea.dev/credit-card-generator",
+    "version": "1.0.0",
+    "description": "A Node.js package that generates valid credit card numbers, expiry dates, and CVV2 codes. The credit card numbers are valid with respect to the Luhn algorithm, and the CVV2 codes are generated using the Tripple-DES algorithm with double length keys.",
+    "main": "dist/CreditCardGenerator.js",
+    "types": "dist/CreditCardGenerator.d.ts",
+    "scripts": {
+        "test": "mocha -r ts-node/register ./test/**/*.ts",
+        "build": "rm -rf ./dist/* && tsc"
+    },
+    "keywords": [
+        "credit",
+        "card",
+        "number",
+        "generator",
+        "validator",
+        "cvv2",
+        "credit card validator",
+        "credit card generator",
+        "luhn algorithm",
+        "cc",
+        "cvv",
+        "bin"
+    ],
+    "author": {
+        "name": "Mihnea Octavian Manolache",
+        "email": "mihnea.dev@gmail.com",
+        "url": "https://github.com/mihneamanolache/"
+    },
+    "homepage": "https://github.com/mihneamanolache/credit-card-generator",
+    "bugs": {
+        "url": "https://github.com/mihneamanolache/credit-card-generator/issues",
+        "email": "mihnea.dev@gmail.com"
+    },
+    "repository": {
+        "type": "github",
+        "url": "git+https://github.com/mihneamanolache/credit-card-generator.git"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@types/chai": "^4.3.5",
+        "@types/mocha": "^10.0.1",
+        "chai": "^4.3.7",
+        "mocha": "^10.2.0",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.1.6"
+    },
+    "dependencies": {
+        "@types/crypto-js": "^4.1.1",
+        "@types/node": "^20.4.2",
+        "@types/node-forge": "^1.3.3",
+        "crypto": "^1.0.1",
+        "crypto-js": "^4.1.1",
+        "dotenv": "^16.3.1",
+        "node-forge": "^1.3.1"
+    }
+}
