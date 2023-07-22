@@ -17,7 +17,7 @@ const carder = new CreditCardGenerator()
 /** Create a single card */
 const card = carder.generate_one()
 /** Create a set of cards */
-const set = carder.generate_set(1)
+const set = carder.generate_set(2)
 /** Log the results */
 console.log(card, '\n', set)
 ```
@@ -41,3 +41,36 @@ This will output:
   }
 }
 ```
+
+## Parameters
+1. `new CreditCardGenerator()`
+Create a new instance of the CreditCardGenerator class.
+```ts
+(alias) new CreditCardGenerator(encryption_key?: string | null | undefined, cc_presents?: Object<ICCPreset> | null | undefined, service_code?: number | undefined, log_in_console?: boolean | undefined): CreditCardGenerator
+```
+- `encryption_key`  - This parameter is the encryption key that will be used to generate the CVV2 code
+- `cc_presents`     - This parameter is an object that contains credit card vendors with prefixes and digits length (`ICCPreset` interface)
+- `service_code`    - This parameter is the service code that will be used to generate the credit card number
+- `log_in_console`  - This parameter specifies whether or not the function should log its output to the console
+
+2. `.generate_one()`
+Generate a single credit card.
+```ts
+(method) CreditCardGenerator.generate_one(type?: CreditCardTypes | undefined): ICreditCard
+```
+- `type`            - Type of credit card to be used
+
+3. `.generate_set`
+Generate a set of credit cards.
+```ts
+(method) CreditCardGenerator.generate_set(size: number, type?: CreditCardTypes | undefined): Set<ICreditCard>
+```
+- `size`            - Batch size
+- `type`            - Type of credit card to be used
+
+4. `CreditCardGenerator.check_sum()`
+Check if a credit card is valid with respect to the Luhn algorithm.
+```ts
+(method) CreditCardGenerator.check_sum(number: string): boolean
+```
+- `number`          - Credit card number to be validated
