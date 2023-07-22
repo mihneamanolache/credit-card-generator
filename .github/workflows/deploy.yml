@@ -35,10 +35,10 @@ jobs:
           git config --local user.email "mihnea.dev@gmail.com"
           git config --local user.name "Mihnea Manolache"
           git fetch
-          git checkout origin/main
+          git checkout origin/$GITHUB_HEAD_REF
           git add .
           git commit -m "CI: Version bump"
-          git push origin main
+          git push origin HEAD:$GITHUB_HEAD_REF
 
       - name: Publish 
         run: npm publish
