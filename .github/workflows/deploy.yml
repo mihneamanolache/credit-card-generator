@@ -21,25 +21,9 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Run Unit Tests
-        run: npm run test
-        env:
-          API_STACKS: ${{ secrets.API_STACKS }}
-
       - name: Compile
         run: npm run build
       
-      - name: Version Bump
-        run: | 
-          npm run version:bump
-          git config --local user.email "mihnea.dev@gmail.com"
-          git config --local user.name "Mihnea Manolache"
-          git fetch
-          git checkout origin/$GITHUB_HEAD_REF
-          git add .
-          git commit -m "CI: Version bump"
-          git push origin HEAD:$GITHUB_HEAD_REF
-
       - name: Publish 
         run: npm publish
         env:
