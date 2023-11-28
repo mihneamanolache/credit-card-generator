@@ -1,6 +1,6 @@
 {
     "name": "@mihnea.dev/credit-card-generator",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "A Node.js package that generates valid credit card numbers, expiry dates, and CVV2 codes. The credit card numbers are valid with respect to the Luhn algorithm, and the CVV2 codes are generated using the Tripple-DES algorithm with double length keys.",
     "main": "dist/CreditCardGenerator.js",
     "types": "dist/CreditCardGenerator.d.ts",
