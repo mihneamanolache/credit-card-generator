@@ -74,3 +74,6 @@ Check if a credit card is valid with respect to the Luhn algorithm.
 (method) CreditCardGenerator.check_sum(number: string): boolean
 ```
 - `number`          - Credit card number to be validated
+
+## DISCLAIMER
+The credit card numbers and additional information produced by this tool are entirely arbitrary and lack any genuine monetary significance. Please refrain from attempting to employ these fictitious credit card details for any transactions, as they are non-functional. Engaging in illegal activities such as **attempting to hack or scam using counterfeit credit card information is against the law and may result in penalties, including imprisonment**. We unequivocally disapprove of any unlawful actions and will collaborate closely with law enforcement to scrutinize and take legal action against individuals who misuse our tools.
